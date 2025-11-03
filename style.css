@@ -1,12 +1,23 @@
+html{
+    overscroll-behavior: none;
+}
+
 body {
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #18272F;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-size: 16px;
 }
 
 .aboutText {
-    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: 400;
 }
 
 .navLinks {
@@ -15,8 +26,8 @@ body {
 }
 
 nav img {
-    width: 10%;
-    height: auto;
+    width: auto;
+    height: 75%;
 }
 
 .navbar {
@@ -34,6 +45,9 @@ nav button {
     background-color: white;
     border: 2px solid #18272F;
     padding: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 nav button:hover {
@@ -41,7 +55,6 @@ nav button:hover {
     color: white;
     cursor: pointer;
 }
-
 
 .aboutContainer {
     display: flex;
@@ -58,6 +71,7 @@ nav button:hover {
 .aboutVideo {
     width: 45%;
     border-radius: 1em;
+    margin: 2%;
 }
 
 .projectsContainer {
@@ -65,9 +79,8 @@ nav button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 1em;
+    border-radius: 2em;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-
 }
 
 .projects {
@@ -87,7 +100,13 @@ a {
     color: #18272F;
     position: relative;
     text-decoration: none;
-    font-size: larger;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d1a20;
 }
 
 a::before {
@@ -109,9 +128,16 @@ a:hover::before {
     transform: scaleX(1);
 }
 
-
-
 @media (max-width: 768px) {
+    .aboutContainer, .projectsContainer {
+        width: 95%;
+        border-radius: 1em;
+    }
+
+    .aboutVideo {
+        width: 70%;
+    }
+
     .aboutContainer {
         flex-direction: column;
     }
@@ -123,5 +149,16 @@ a:hover::before {
 
     .project {
         width: 90%;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1em;
+        
     }
 }
