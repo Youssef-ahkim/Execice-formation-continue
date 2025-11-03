@@ -130,7 +130,7 @@ a:hover::before {
 
 @media (max-width: 768px) {
     .aboutContainer, .projectsContainer {
-        width: 95%;
+        width: 100%;
         border-radius: 1em;
     }
 
